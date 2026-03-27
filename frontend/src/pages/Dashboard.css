@@ -1,0 +1,167 @@
+/* Layout */
+
+.main,
+.code-input {
+
+  scrollbar-width: none;    
+}
+
+.main::-webkit-scrollbar,
+.code-input::-webkit-scrollbar {
+  display: none;                
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #0f172a;
+    color: white;
+    
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 300px;
+    border-right: 1px solid #1e293b;
+    padding: 15px;
+    overflow-y: auto;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 10px;
+  }
+  
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #1e293b;
+    border-radius: 6px;
+  }
+  
+  .delete-btn {
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .delete-btn:hover {
+    color: #ff4d4d;
+  }
+  
+  .history-item:hover {
+    background: #334155;
+  }
+  
+  /* Main */
+  .main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  
+  /* Input */
+  .code-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+    background: #1e293b;
+    color: white;
+  }
+  
+  /* Button */
+  .explain-btn {
+    padding: 10px 20px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .explain-btn:hover {
+    background: #2563eb;
+  }
+  
+  /* Loader */
+  .loader {
+    margin-top: 15px;
+  }
+  
+  /* Result */
+  .result {
+    margin-top: 20px;
+  }
+  
+  .copy-btn {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .copy-btn:hover {
+    background: #1e293b;
+  }
+  
+  /* Text */
+  .section {
+    margin-top: 15px;
+  }
+
+  .line-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.6;
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .clear-btn {
+    padding: 10px 20px;
+    background: #ef4444;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .clear-btn:hover {
+    background: #dc2626;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    margin: 0;
+  }
+  
+  .logout-btn {
+    padding: 8px 16px;
+    background: #f59e0b;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .logout-btn:hover {
+    background: #d97706;
+  }
