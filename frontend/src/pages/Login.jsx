@@ -5,10 +5,12 @@ import "./Login.css";
 
 export default function Login() {
     const [form, setForm] = useState({ email: "", password: "" });
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
         try {
             const res = await API.post("/auth/login", form);
@@ -17,6 +19,8 @@ export default function Login() {
             navigate("/dashboard");
         } catch (err) {
             alert(err.response?.data?.message || "Login failed");
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -50,7 +54,9 @@ export default function Login() {
                         }
                     />
 
-                    <button className="login-btn">Login</button>
+                    <button className="login-btn" disabled={loading}>
+                        {loading ? "Logging in..." : "Login"}
+                    </button>
 
                 </form>
 
